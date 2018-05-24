@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+#_*_coding:UTF-8_*_
+a={'姓名':'张三','年龄':22}
+class zidian():
+	def jr(self,**kwargs):
+		a.update(kwargs)
+		print(a)
+	def sc(self,c):
+		a.pop(c)
+		print(a)
+	def xg(self,d,e):
+		a[d]=e
+		print(a)
+	def cz(self,g):
+		f=a[g]
+		print(f)		
+zd=zidian()
+zd.jr(姓名1='乔治',年龄1=12)
+zd.sc('姓名')
+zd.xg('姓名1','李小龙')	
+zd.cz('姓名1')			
