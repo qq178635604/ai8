@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+#_*_coding:UTF-8_*_
+def digui(n):
+	if n==1:
+		return
+	print(n,'*',n-1)
+	digui(n-1)	
+a=digui(5)
+print(a)
