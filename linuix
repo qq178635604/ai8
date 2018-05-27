@@ -43,6 +43,7 @@
   /etc/passwd 该文件保存系统中的所有用户信息
   /etc/shadow 该文件保存用户的密码及密码策略
   /etc/group 该文件保存用户组的信息
+  chage 用户名 修改用户的密码策略
   useradd 创建用户
    参数： -d指定用户家目录 -s指定用户登陆shall -g指定用户组id
   userdel 删除用户
@@ -63,8 +64,8 @@
   chmod nnn：按指定的权限模型授予文件权限 读/写/执行
   chmod nnnn：按照指定权限模型授予文件权限
   chown 修改文件所属信息用户
-  chgrp
-  getfacl
+  chgrp 修改文件所属用户组
+  getfacl filename 查看文件的acl权限
   setfacl -m -x -d
 4.软件安装及服务
   源仓库安装方式：1.yum install 软件包 （redhaat,centos,fedora系统）2.apt-get iantall 软件包（deb系统）
@@ -149,24 +150,25 @@
   s 删除当前进入插入模式
   x 删除当前
   dd 光标移至第一行
-  nG 光标移至感叹号
-  G
+  nG 光标移至第n行
+  G 光标移至最后一行
   :  底线模式
   :! 执行命令
-  :.!
+  :.! 把命令结果写入文本编辑器
   end键 光标移动到当前行最后一位
-  cc
-  y
-  nyy
-  v
-  h
-  j
-  k
-  l
+  cc 删除当前行并进入编辑模式
+  y 复制   
+  nyy 复制第n行
+  v 选择模式
+  h 光标前移
+  j 光标下移
+  k 光标上移
+  l 光标后移
   u 撤销
-  ctrl+r
+  ctrl+r 反撤销
   :w 写入
   :w! 强制
   :q 退出
   :q! 强制退出
-  :1,9w>>
+  :1,9w>> 1~9行写入文件
+  nohl 取消高亮
